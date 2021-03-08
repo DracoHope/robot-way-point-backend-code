@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Robot Move</title>
+</head>
+<body style="text-align: center; background-color: rgb(201, 169, 231);">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Robot V1</a>
+          <a class="navbar-brand" href="/robotV2">Robot V2</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <h3 id="robot position"></h3>
+    <h3 id="cuurentWayPoint"></h3>
+
+    <canvas class="routing" id="myCanvas" width="800" height="500" style="background-color: aquamarine;"></canvas>
+    <br>
+    
+        <input  id="inputWaypoint1" type="text" name="waypoint1" placeholder="(200, 200)" value="(100, 50)" style="margin-right: 20px;">
+        <button type="submit" onclick="getWayPoint()" style="margin-right: 20px;">Submit Way Point</button><p>This version can only submit one way point at any time</p>
+    
+    <br>
+    <div style="margin: 0; padding: 0; text-align: left;">
+        <p>Please take note: The Canvas Size is Width: 800px by Height: 500px</p>
+        <p>The Way Point format is ( X , Y )</p>
+        <p>When the entered X value is less than or equal to 0 then it will be round up to 10. When the entered X value is more than or equal to 800 then it will be round up to 790</p>
+        <p>When the entered Y value is less than or equal to 0 then it will be round up to 10. When the entered Y value is more than or equal to 500 then it will be round up to 490</p>
+    </div>
+
+    <script type="text/javascript" src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    
+</body>
+</html>
